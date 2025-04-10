@@ -148,7 +148,7 @@ function App() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl text-white">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Expertos en Liquidación de Seguros
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
