@@ -146,7 +146,7 @@ function App() {
       <section id="inicio" className="relative h-screen">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-90"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center mix-blend-overlay"></div>
-        <div className="relative container mx-auto px-4 h-full flex items-center">
+        <div className="relative container mx-auto px-4 h-full flex items-start pt-64">
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Expertos en Liquidación de Seguros
@@ -168,7 +168,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="nosotros" className="py-20 bg-white">
+      <section id="nosotros" className="py-20 bg-white scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -212,7 +212,7 @@ function App() {
       </section>
 
       {/* History Section */}
-      <section id="historia" className="py-20 bg-gray-50">
+      <section id="historia" className="py-20 bg-gray-50 scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
@@ -247,7 +247,7 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="servicios" className="py-20 bg-white">
+      <section id="servicios" className="py-20 bg-white scroll-mt-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
             Nuestros Servicios
@@ -319,7 +319,7 @@ function App() {
       </section>
 
       {/* Relevant Cases Section */}
-      <section id="casos" className="py-20 bg-gray-50">
+      <section id="casos" className="py-20 bg-gray-50 scroll-mt-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
             Casos Relevantes
@@ -540,7 +540,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="py-20 bg-gray-50">
+      <section id="contacto" className="py-20 bg-gray-50 scroll-mt-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
             Contáctanos
