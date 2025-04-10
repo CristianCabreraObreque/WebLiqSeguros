@@ -41,11 +41,7 @@ function App() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <img
-                src="/logo.png"
-                alt="PLS"
-                className="h-24 mb-4 brightness-0"
-              />
+              <img src="/logo.png" alt="PLS" className="h-24 mb-4" />
             </div>
 
             {/* Desktop Menu */}
