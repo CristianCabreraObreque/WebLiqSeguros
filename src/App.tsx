@@ -1,5 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Building2, Users, Flame, Wrench, Building, History, Award, Briefcase, Menu, X, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Building2,
+  Users,
+  Flame,
+  Wrench,
+  Building,
+  History,
+  Award,
+  Briefcase,
+  Menu,
+  X,
+  ChevronDown,
+} from "lucide-react";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,31 +26,70 @@ function App() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
+      >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <img src="/logo.png" alt="PLS" className="h-12" />
+              <img src="/logo.jpeg" alt="PLS" className="h-12" />
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#inicio" className={`font-medium ${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-blue-500 transition-colors`}>Inicio</a>
-              <a href="#nosotros" className={`font-medium ${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-blue-500 transition-colors`}>Nosotros</a>
-              <a href="#historia" className={`font-medium ${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-blue-500 transition-colors`}>Historia</a>
-              <a href="#servicios" className={`font-medium ${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-blue-500 transition-colors`}>Servicios</a>
-              <a href="#contacto" className={`font-medium ${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-blue-500 transition-colors`}>Contacto</a>
+              <a
+                href="#inicio"
+                className={`font-medium ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                } hover:text-blue-500 transition-colors`}
+              >
+                Inicio
+              </a>
+              <a
+                href="#nosotros"
+                className={`font-medium ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                } hover:text-blue-500 transition-colors`}
+              >
+                Nosotros
+              </a>
+              <a
+                href="#historia"
+                className={`font-medium ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                } hover:text-blue-500 transition-colors`}
+              >
+                Historia
+              </a>
+              <a
+                href="#servicios"
+                className={`font-medium ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                } hover:text-blue-500 transition-colors`}
+              >
+                Servicios
+              </a>
+              <a
+                href="#contacto"
+                className={`font-medium ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                } hover:text-blue-500 transition-colors`}
+              >
+                Contacto
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -46,11 +101,41 @@ function App() {
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4">
               <div className="flex flex-col space-y-4 px-4">
-                <a href="#inicio" className="text-gray-800 hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>Inicio</a>
-                <a href="#nosotros" className="text-gray-800 hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>Nosotros</a>
-                <a href="#historia" className="text-gray-800 hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>Historia</a>
-                <a href="#servicios" className="text-gray-800 hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>Servicios</a>
-                <a href="#contacto" className="text-gray-800 hover:text-blue-500" onClick={() => setIsMenuOpen(false)}>Contacto</a>
+                <a
+                  href="#inicio"
+                  className="text-gray-800 hover:text-blue-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Inicio
+                </a>
+                <a
+                  href="#nosotros"
+                  className="text-gray-800 hover:text-blue-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Nosotros
+                </a>
+                <a
+                  href="#historia"
+                  className="text-gray-800 hover:text-blue-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Historia
+                </a>
+                <a
+                  href="#servicios"
+                  className="text-gray-800 hover:text-blue-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Servicios
+                </a>
+                <a
+                  href="#contacto"
+                  className="text-gray-800 hover:text-blue-500"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contacto
+                </a>
               </div>
             </div>
           )}
@@ -90,7 +175,8 @@ function App() {
               Nuestra Empresa
             </h2>
             <p className="text-lg text-gray-600">
-              Somos una empresa líder en liquidación de seguros, comprometida con la excelencia y la satisfacción de nuestros clientes.
+              Somos una empresa líder en liquidación de seguros, comprometida
+              con la excelencia y la satisfacción de nuestros clientes.
             </p>
           </div>
 
@@ -99,7 +185,8 @@ function App() {
               <History className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-4">Experiencia</h3>
               <p className="text-gray-600">
-                Más de tres décadas de experiencia en el mercado asegurador chileno, brindando soluciones efectivas y profesionales.
+                Más de tres décadas de experiencia en el mercado asegurador
+                chileno, brindando soluciones efectivas y profesionales.
               </p>
             </div>
 
@@ -107,7 +194,8 @@ function App() {
               <Award className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-4">Profesionalismo</h3>
               <p className="text-gray-600">
-                Equipo altamente calificado y comprometido con la excelencia en cada proceso de liquidación.
+                Equipo altamente calificado y comprometido con la excelencia en
+                cada proceso de liquidación.
               </p>
             </div>
 
@@ -115,7 +203,8 @@ function App() {
               <Users className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-4">Servicio Integral</h3>
               <p className="text-gray-600">
-                Atención personalizada y seguimiento detallado de cada caso para garantizar la mejor resolución.
+                Atención personalizada y seguimiento detallado de cada caso para
+                garantizar la mejor resolución.
               </p>
             </div>
           </div>
@@ -132,13 +221,24 @@ function App() {
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <div className="prose max-w-none">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Paredes Liquidadores de Seguros (PLS) es una firma de liquidación de seguros que nace con el propósito de brindar un servicio altamente especializado en la gestión y resolución de siniestros comerciales e industriales.
+                  Paredes Liquidadores de Seguros (PLS) es una firma de
+                  liquidación de seguros que nace con el propósito de brindar un
+                  servicio altamente especializado en la gestión y resolución de
+                  siniestros comerciales e industriales.
                 </p>
                 <p className="text-lg leading-relaxed text-gray-700 mt-4">
-                  La empresa se constituye bajo la sociedad de Rogelio Paredes Flores, un reconocido Liquidador Oficial de Seguros con una vasta trayectoria en el mercado de liquidaciones de siniestros, consolidada a lo largo de décadas de experiencia en el sector asegurador.
+                  La empresa se constituye bajo la sociedad de Rogelio Paredes
+                  Flores, un reconocido Liquidador Oficial de Seguros con una
+                  vasta trayectoria en el mercado de liquidaciones de
+                  siniestros, consolidada a lo largo de décadas de experiencia
+                  en el sector asegurador.
                 </p>
                 <p className="text-lg leading-relaxed text-gray-700 mt-4">
-                  Además, cuenta con la participación de Mauricio Pardes Espinoza como Gestor Comercial y Operaciones, quien aporta su experiencia en la administración y gestión estratégica de siniestros, fortaleciendo el compromiso de la empresa con la excelencia y la eficiencia en el servicio.
+                  Además, cuenta con la participación de Mauricio Pardes
+                  Espinoza como Gestor Comercial y Operaciones, quien aporta su
+                  experiencia en la administración y gestión estratégica de
+                  siniestros, fortaleciendo el compromiso de la empresa con la
+                  excelencia y la eficiencia en el servicio.
                 </p>
               </div>
             </div>
@@ -158,7 +258,9 @@ function App() {
               <Building2 className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Seguros Generales</h3>
               <p className="text-gray-600">
-                Liquidación de siniestros en todas las áreas de seguros generales, incluyendo property, responsabilidad civil y transportes.
+                Liquidación de siniestros en todas las áreas de seguros
+                generales, incluyendo property, responsabilidad civil y
+                transportes.
               </p>
             </div>
 
@@ -166,31 +268,41 @@ function App() {
               <Flame className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Incendio y Aliados</h3>
               <p className="text-gray-600">
-                Especialistas en siniestros de incendio y riesgos catastróficos, con amplia experiencia en eventos de gran magnitud.
+                Especialistas en siniestros de incendio y riesgos catastróficos,
+                con amplia experiencia en eventos de gran magnitud.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Building className="w-12 h-12 text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Ingeniería y Construcción</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Ingeniería y Construcción
+              </h3>
               <p className="text-gray-600">
-                Liquidación especializada en proyectos de construcción, maquinaria y equipos industriales.
+                Liquidación especializada en proyectos de construcción,
+                maquinaria y equipos industriales.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Wrench className="w-12 h-12 text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Averías de Maquinaria</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Averías de Maquinaria
+              </h3>
               <p className="text-gray-600">
-                Evaluación y liquidación de daños en maquinaria industrial y equipos especializados.
+                Evaluación y liquidación de daños en maquinaria industrial y
+                equipos especializados.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Users className="w-12 h-12 text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Responsabilidad Civil</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Responsabilidad Civil
+              </h3>
               <p className="text-gray-600">
-                Gestión de siniestros de responsabilidad civil general, profesional y de productos.
+                Gestión de siniestros de responsabilidad civil general,
+                profesional y de productos.
               </p>
             </div>
 
@@ -198,7 +310,8 @@ function App() {
               <Briefcase className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Riesgos Varios</h3>
               <p className="text-gray-600">
-                Atención integral de siniestros en diversos ramos, adaptándonos a las necesidades específicas de cada caso.
+                Atención integral de siniestros en diversos ramos, adaptándonos
+                a las necesidades específicas de cada caso.
               </p>
             </div>
           </div>
@@ -217,132 +330,210 @@ function App() {
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🔥</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Incendio en Planta Industrial</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Incendio en Planta Industrial
+                  </h3>
                   <p className="text-blue-600 font-semibold">$299.359.921</p>
                   <p className="text-gray-600 text-sm">Región Metropolitana</p>
                 </div>
               </div>
-              <p className="text-gray-600">Un devastador incendio arrasó con más de 1.000 m² de galpones en una empresa agrícola, consumiendo toda la infraestructura y activos. Nuestro equipo gestionó exitosamente la liquidación del siniestro, asegurando una rápida indemnización para la pronta recuperación del negocio.</p>
+              <p className="text-gray-600">
+                Un devastador incendio arrasó con más de 1.000 m² de galpones en
+                una empresa agrícola, consumiendo toda la infraestructura y
+                activos. Nuestro equipo gestionó exitosamente la liquidación del
+                siniestro, asegurando una rápida indemnización para la pronta
+                recuperación del negocio.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🏗️</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Derrumbe de Excavadora</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Derrumbe de Excavadora
+                  </h3>
                   <p className="text-blue-600 font-semibold">$31.462.363</p>
                   <p className="text-gray-600 text-sm">Octava Región</p>
                 </div>
               </div>
-              <p className="text-gray-600">Mientras operaba al interior de una cantera, una excavadora fue impactada por un derrumbe masivo desde el talud. Gracias a la intervención oportuna del operador, se evitó una tragedia. Nuestro rol fue clave para agilizar la resolución y compensación por los daños estructurales.</p>
+              <p className="text-gray-600">
+                Mientras operaba al interior de una cantera, una excavadora fue
+                impactada por un derrumbe masivo desde el talud. Gracias a la
+                intervención oportuna del operador, se evitó una tragedia.
+                Nuestro rol fue clave para agilizar la resolución y compensación
+                por los daños estructurales.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🍔</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Incendio en Cadena de Comida Rápida</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Incendio en Cadena de Comida Rápida
+                  </h3>
                   <p className="text-blue-600 font-semibold">$184.081.264</p>
                   <p className="text-gray-600 text-sm">Región Metropolitana</p>
                 </div>
               </div>
-              <p className="text-gray-600">Un voraz incendio consumió un reconocido local comercial, propagándose a otros negocios colindantes. Nuestro equipo apoyó en cada paso del proceso, permitiendo a los asegurados enfrentar con éxito este siniestro total.</p>
+              <p className="text-gray-600">
+                Un voraz incendio consumió un reconocido local comercial,
+                propagándose a otros negocios colindantes. Nuestro equipo apoyó
+                en cada paso del proceso, permitiendo a los asegurados enfrentar
+                con éxito este siniestro total.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🌊</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Volcamiento de Retroexcavadora</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Volcamiento de Retroexcavadora
+                  </h3>
                   <p className="text-blue-600 font-semibold">$25.803.310</p>
                   <p className="text-gray-600 text-sm">Octava Región</p>
                 </div>
               </div>
-              <p className="text-gray-600">Una máquina móvil fue arrastrada por el terreno inestable hasta el mar. Los daños a los sistemas mecánicos fueron significativos. Intervinimos de inmediato para validar la cobertura y asegurar una compensación justa.</p>
+              <p className="text-gray-600">
+                Una máquina móvil fue arrastrada por el terreno inestable hasta
+                el mar. Los daños a los sistemas mecánicos fueron
+                significativos. Intervinimos de inmediato para validar la
+                cobertura y asegurar una compensación justa.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🧯</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Incendio en Mall del Centro</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Incendio en Mall del Centro
+                  </h3>
                   <p className="text-blue-600 font-semibold">$72.207.980</p>
                   <p className="text-gray-600 text-sm">Región Metropolitana</p>
                 </div>
               </div>
-              <p className="text-gray-600">Un siniestro en el segundo nivel de un mall afectó gravemente a un local de comida rápida, obligándolo a detener operaciones. Nuestro trabajo permitió cubrir tanto los daños materiales como las pérdidas por interrupción de actividades.</p>
+              <p className="text-gray-600">
+                Un siniestro en el segundo nivel de un mall afectó gravemente a
+                un local de comida rápida, obligándolo a detener operaciones.
+                Nuestro trabajo permitió cubrir tanto los daños materiales como
+                las pérdidas por interrupción de actividades.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🏠</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Incendio en Vivienda</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Incendio en Vivienda
+                  </h3>
                   <p className="text-blue-600 font-semibold">$59.572.557</p>
                   <p className="text-gray-600 text-sm">Octava Región</p>
                 </div>
               </div>
-              <p className="text-gray-600">Un incendio amenazó con destruir por completo una casa habitación. La rápida actuación de Bomberos evitó una tragedia mayor. Nuestro respaldo fue clave para restaurar el hogar y la tranquilidad de la familia afectada.</p>
+              <p className="text-gray-600">
+                Un incendio amenazó con destruir por completo una casa
+                habitación. La rápida actuación de Bomberos evitó una tragedia
+                mayor. Nuestro respaldo fue clave para restaurar el hogar y la
+                tranquilidad de la familia afectada.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🔒</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Robo en Empresa Minera</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Robo en Empresa Minera
+                  </h3>
                   <p className="text-blue-600 font-semibold">$51.595.421</p>
                   <p className="text-gray-600 text-sm">Región Metropolitana</p>
                 </div>
               </div>
-              <p className="text-gray-600">Delincuentes accedieron a oficinas y bodegas de una empresa proveedora de insumos mineros. Nuestro equipo facilitó una investigación ágil y una liquidación eficiente para reponer los activos sustraídos.</p>
+              <p className="text-gray-600">
+                Delincuentes accedieron a oficinas y bodegas de una empresa
+                proveedora de insumos mineros. Nuestro equipo facilitó una
+                investigación ágil y una liquidación eficiente para reponer los
+                activos sustraídos.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🚨</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Robo a Empresa de Ingeniería</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Robo a Empresa de Ingeniería
+                  </h3>
                   <p className="text-blue-600 font-semibold">$48.395.367</p>
                   <p className="text-gray-600 text-sm">Octava Región</p>
                 </div>
               </div>
-              <p className="text-gray-600">Tras cortar la energía y desactivar alarmas, delincuentes sustrajeron especies clave para el funcionamiento de la empresa. Se gestionó la indemnización y reactivación de sus operaciones en tiempo récord.</p>
+              <p className="text-gray-600">
+                Tras cortar la energía y desactivar alarmas, delincuentes
+                sustrajeron especies clave para el funcionamiento de la empresa.
+                Se gestionó la indemnización y reactivación de sus operaciones
+                en tiempo récord.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🚗</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Incendio en Firma Automotriz</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Incendio en Firma Automotriz
+                  </h3>
                   <p className="text-blue-600 font-semibold">$326.729.996</p>
                   <p className="text-gray-600 text-sm">Región Metropolitana</p>
                 </div>
               </div>
-              <p className="text-gray-600">Un incendio nocturno en una firma automotriz causó graves pérdidas. La rápida intervención de nuestro equipo fue fundamental para contener el impacto económico y permitir la reconstrucción de la operación.</p>
+              <p className="text-gray-600">
+                Un incendio nocturno en una firma automotriz causó graves
+                pérdidas. La rápida intervención de nuestro equipo fue
+                fundamental para contener el impacto económico y permitir la
+                reconstrucción de la operación.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">💨</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Daños por Temporal</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Daños por Temporal
+                  </h3>
                   <p className="text-blue-600 font-semibold">$38.259.878</p>
                   <p className="text-gray-600 text-sm">Octava Región</p>
                 </div>
               </div>
-              <p className="text-gray-600">Vientos extremos afectaron la techumbre de un galpón industrial. Nuestra evaluación técnica permitió una pronta reposición y continuidad operativa del asegurado.</p>
+              <p className="text-gray-600">
+                Vientos extremos afectaron la techumbre de un galpón industrial.
+                Nuestra evaluación técnica permitió una pronta reposición y
+                continuidad operativa del asegurado.
+              </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start mb-4">
                 <span className="text-4xl mr-3">🚜</span>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Robo de Maquinaria</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Robo de Maquinaria
+                  </h3>
                   <p className="text-blue-600 font-semibold">$47.537.925</p>
                   <p className="text-gray-600 text-sm">Región Metropolitana</p>
                 </div>
               </div>
-              <p className="text-gray-600">Durante la madrugada, antisociales robaron maquinaria pesada tras intimidar a los guardias. Activamos el proceso de liquidación con celeridad, recuperando parte de las pérdidas gracias a nuestra gestión.</p>
+              <p className="text-gray-600">
+                Durante la madrugada, antisociales robaron maquinaria pesada
+                tras intimidar a los guardias. Activamos el proceso de
+                liquidación con celeridad, recuperando parte de las pérdidas
+                gracias a nuestra gestión.
+              </p>
             </div>
           </div>
         </div>
@@ -358,7 +549,9 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Información de Contacto</h3>
+                <h3 className="text-2xl font-semibold mb-6">
+                  Información de Contacto
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Phone className="w-6 h-6 text-blue-500" />
@@ -378,14 +571,18 @@ function App() {
                     <MapPin className="w-6 h-6 text-blue-500" />
                     <div>
                       <p className="font-medium">Dirección</p>
-                      <p className="text-gray-600">Av. Providencia 1208, Providencia, Santiago</p>
+                      <p className="text-gray-600">
+                        Av. Providencia 1208, Providencia, Santiago
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Clock className="w-6 h-6 text-blue-500" />
                     <div>
                       <p className="font-medium">Horario de Atención</p>
-                      <p className="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                      <p className="text-gray-600">
+                        Lunes a Viernes: 9:00 - 18:00
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -449,21 +646,56 @@ function App() {
             <div>
               <img src="/logo.png" alt="PLS" className="h-12 mb-4" />
               <p className="text-gray-400">
-                Expertos en liquidación de seguros con más de 30 años de experiencia en el mercado chileno.
+                Expertos en liquidación de seguros con más de 30 años de
+                experiencia en el mercado chileno.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
               <ul className="space-y-2">
-                <li><a href="#inicio" className="text-gray-400 hover:text-white">Inicio</a></li>
-                <li><a href="#nosotros" className="text-gray-400 hover:text-white">Nosotros</a></li>
-                <li><a href="#historia" className="text-gray-400 hover:text-white">Historia</a></li>
-                <li><a href="#servicios" className="text-gray-400 hover:text-white">Servicios</a></li>
-                <li><a href="#contacto" className="text-gray-400 hover:text-white">Contacto</a></li>
+                <li>
+                  <a href="#inicio" className="text-gray-400 hover:text-white">
+                    Inicio
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#nosotros"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Nosotros
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#historia"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Historia
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#servicios"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Servicios
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contacto"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Contacto
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Horario de Atención</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                Horario de Atención
+              </h3>
               <p className="text-gray-400">Lunes a Viernes</p>
               <p className="text-gray-400">9:00 - 18:00</p>
               <div className="mt-4">
@@ -474,7 +706,8 @@ function App() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Paredes Liquidadores de Seguros. Todos los derechos reservados.
+              © {new Date().getFullYear()} Paredes Liquidadores de Seguros.
+              Todos los derechos reservados.
             </p>
           </div>
         </div>
