@@ -149,10 +149,10 @@ function App() {
         <div className="relative container mx-auto px-4 h-full flex items-start pt-64">
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expertos en Liquidación de Seguros
+              Experiencia en Liquidación de Siniestros
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Más de 30 años de experiencia en el mercado asegurador chileno
+              Mas de 40 años de reconocida experiencia en el mercado asegurador
             </p>
             <a
               href="#contacto"
@@ -185,7 +185,7 @@ function App() {
               <History className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-4">Experiencia</h3>
               <p className="text-gray-600">
-                Más de tres décadas de experiencia en el mercado asegurador
+                Más de cuatro décadas de experiencia en el mercado asegurador
                 chileno, brindando soluciones efectivas y profesionales.
               </p>
             </div>
@@ -221,10 +221,10 @@ function App() {
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <div className="prose max-w-none">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Paredes Liquidadores de Seguros (PLS) es una firma de
-                  liquidación de seguros que nace con el propósito de brindar un
-                  servicio altamente especializado en la gestión y resolución de
-                  siniestros comerciales e industriales.
+                  Paredes Liquidadores de Seguros (PLS) es una empresa de
+                  liquidación de siniestros que nace con el propósito de brindar
+                  un servicio altamente especializado en la gestión y resolución
+                  de siniestros comerciales e industriales.
                 </p>
                 <p className="text-lg leading-relaxed text-gray-700 mt-4">
                   La empresa se constituye bajo la sociedad de Rogelio Paredes
@@ -252,8 +252,7 @@ function App() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
             Nuestros Servicios
           </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Building2 className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Seguros Generales</h3>
@@ -292,26 +291,6 @@ function App() {
               <p className="text-gray-600">
                 Evaluación y liquidación de daños en maquinaria industrial y
                 equipos especializados.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Users className="w-12 h-12 text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">
-                Responsabilidad Civil
-              </h3>
-              <p className="text-gray-600">
-                Gestión de siniestros de responsabilidad civil general,
-                profesional y de productos.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Briefcase className="w-12 h-12 text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Riesgos Varios</h3>
-              <p className="text-gray-600">
-                Atención integral de siniestros en diversos ramos, adaptándonos
-                a las necesidades específicas de cada caso.
               </p>
             </div>
           </div>
@@ -646,8 +625,8 @@ function App() {
             <div>
               <img src="/logo.png" alt="PLS" className="h-12 mb-4" />
               <p className="text-gray-400">
-                Expertos en liquidación de seguros con más de 30 años de
-                experiencia en el mercado chileno.
+                Mas de 40 años de reconocida experiencia en el mercado
+                asegurador.
               </p>
             </div>
             <div>
